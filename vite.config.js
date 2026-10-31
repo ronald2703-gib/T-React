@@ -4,10 +4,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: '/T-React/',
-
   plugins: [
     react(),
-
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [

@@ -1,57 +1,72 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+const SUPPORT_LINKS = [
+  { to: '/asistencia', label: 'Asistencia', icon: 'bi-headset' },
+  { to: '/reportes', label: 'Reportes', icon: 'bi-exclamation-triangle' },
+  { to: '/ayuda', label: 'Ayuda', icon: 'bi-question-circle' },
+];
+
+// TODO: reemplaza por los perfiles reales de la comunidad
+const SOCIAL_LINKS = [
+  { href: 'https://www.instagram.com/', label: 'Instagram', icon: 'bi-instagram' },
+  { href: 'https://www.youtube.com/', label: 'YouTube', icon: 'bi-youtube' },
+  { href: 'https://www.facebook.com/', label: 'Facebook', icon: 'bi-facebook' },
+];
 
 export const Footer = () => {
   return (
-    <footer className="bg-white py-5 border-top" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <footer className="bg-white border-top py-4 py-md-5">
       <div className="container" style={{ maxWidth: '1200px' }}>
-        
-        {/* BLOQUE SUPERIOR DE CONTENIDO */}
-        <div className="row align-items-center g-4 justify-content-between pb-4 border-bottom">
-          
-          {/* MARCA SECUNDARIA DE MOTOS */}
+        {/* BLOQUE SUPERIOR */}
+        <div className="row align-items-center g-3 g-md-4 justify-content-between pb-3 pb-md-4 border-bottom">
           <div className="col-12 col-md-6 text-center text-md-start">
-            <h5 className="m-0 text-dark fw-bold text-uppercase" style={{ letterSpacing: '-0.5px' }}>
-              <i className="bi bi-lightning-charge-fill text-danger me-1"></i> XR<span className="text-danger">&</span>CRF<span className="fs-6 text-muted fw-normal ms-1">Hub</span>
-            </h5>
-            <p className="m-0 text-muted small mt-1">
+            <p className="m-0 h5 text-dark fw-bold text-uppercase" style={{ letterSpacing: '-0.5px' }}>
+              <i className="bi bi-lightning-charge-fill text-danger me-1" aria-hidden="true"></i>
+              XR<span className="text-danger">&amp;</span>CRF
+              <span className="fs-6 text-body-secondary fw-normal ms-1">Hub</span>
+            </p>
+            <p className="m-0 mt-1 text-body-secondary small">
               Comunidad off-road y control inteligente de fichas técnicas para motocicletas.
             </p>
           </div>
 
-          {/* ENLACES DE SOPORTE RÁPIDOS */}
-          <div className="col-12 col-md-6">
-            <div className="d-flex justify-content-center justify-content-md-end gap-4">
-              <a href="#asistencia" className="text-secondary text-decoration-none small fw-semibold transition-all" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.classList.replace('text-secondary', 'text-danger')} onMouseLeave={(e) => e.target.classList.replace('text-danger', 'text-secondary')}>
-                <i className="bi bi-headset me-1"></i> Asistencia
-              </a>
-              <a href="#reportes" className="text-secondary text-decoration-none small fw-semibold transition-all" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.classList.replace('text-secondary', 'text-danger')} onMouseLeave={(e) => e.target.classList.replace('text-danger', 'text-secondary')}>
-                <i className="bi bi-exclamation-triangle me-1"></i> Reportes
-              </a>
-              <a href="#ayuda" className="text-secondary text-decoration-none small fw-semibold transition-all" style={{ transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.classList.replace('text-secondary', 'text-danger')} onMouseLeave={(e) => e.target.classList.replace('text-danger', 'text-secondary')}>
-                <i className="bi bi-question-circle me-1"></i> Ayuda
-              </a>
-            </div>
-          </div>
-
+          <nav className="col-12 col-md-6" aria-label="Enlaces de soporte">
+            <ul className="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-1 gap-sm-3 m-0">
+              {SUPPORT_LINKS.map(({ to, label, icon }) => (
+                <li key={to}>
+                  <Link to={to} className="footer-link">
+                    <i className={`bi ${icon}`} aria-hidden="true"></i> {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
-        {/* SECCIÓN INFERIOR DE CRÉDITOS */}
-        <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 text-muted" style={{ fontSize: '13px' }}>
-          <p className="m-0 text-center text-sm-start mb-2 mb-sm-0">
-            &copy; {new Date().getFullYear()} <mark className="bg-danger bg-opacity-10 text-danger px-2 py-0.5 rounded fw-bold text-uppercase">Motos</mark>. Diseñado con total elegancia y minimalismo.
+        {/* CRÉDITOS Y REDES */}
+        <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-3 pt-md-4 gap-2 text-body-secondary small">
+          <p className="m-0 text-center text-sm-start">
+            &copy; {new Date().getFullYear()} <strong className="text-dark text-uppercase">MOTUShonda</strong>.
+            Diseñado con total elegancia y minimalismo.
           </p>
-          
-          {/* REDES O DETALLES EXTRA */}
-          <div className="d-flex gap-3 fs-5">
-            <i className="bi bi-instagram text-secondary" style={{ cursor: 'pointer' }}></i>
-            <i className="bi bi-youtube text-secondary" style={{ cursor: 'pointer' }}></i>
-            <i className="bi bi-facebook text-secondary" style={{ cursor: 'pointer' }}></i>
-          </div>
-        </div>
 
+          <ul className="list-unstyled d-flex m-0">
+            {SOCIAL_LINKS.map(({ href, label, icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${label} (se abre en una pestaña nueva)`}
+                >
+                  <i className={`bi ${icon}`} aria-hidden="true"></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );
 };
-
