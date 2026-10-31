@@ -1,16 +1,135 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
+# 🏍️ MOTUShonda
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Comunidad XR & CRF
 
-## React Compiler
+**MOTUShonda** es una plataforma digital creada para reunir a los apasionados por las motocicletas Honda XR y CRF. Un espacio para explorar información, conocer características técnicas, compartir proyectos y descubrir el mundo del motociclismo off-road.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🌐 **Visita la plataforma:**  
+https://ronald2703-gib.github.io/T-React/
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 ¿Qué es MOTUShonda?
+
+MOTUShonda nace con el propósito de construir una comunidad digital alrededor de las motocicletas Honda XR y CRF, facilitando el acceso a información y recursos de interés para sus usuarios.
+
+Nuestro objetivo es ofrecer una experiencia moderna, intuitiva y accesible desde diferentes dispositivos.
+
+## ✨ Características
+
+- 🏍️ Información sobre las líneas Honda XR y CRF.
+- 🔧 Espacio para conocer modificaciones y proyectos.
+- 📋 Sección de fichas técnicas.
+- 👥 Comunidad enfocada en el motociclismo off-road.
+- 🔐 Interfaces de inicio de sesión y registro.
+- 📱 Diseño adaptable a dispositivos móviles.
+- ⚡ Aplicación web progresiva (PWA).
+
+## 🛠️ Tecnologías utilizadas
+
+| Tecnología | Uso |
+|---|---|
+| React | Construcción de interfaces |
+| JavaScript | Lógica de la aplicación |
+| Vite | Herramienta de desarrollo |
+| React Router | Navegación entre páginas |
+| Bootstrap | Componentes y estilos |
+| Bootstrap Icons | Iconografía |
+| CSS | Diseño y personalización |
+| PWA | Experiencia de aplicación web progresiva |
+
+## 💻 Instalación y ejecución
+
+Si deseas ejecutar el proyecto localmente:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/ronald2703-gib/T-React.git
+   ```
+
+2. Ingresa a la carpeta:
+
+   ```bash
+   cd T-React
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicia el servidor:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abre en tu navegador la dirección que muestra Vite.
+
+## 📦 Compilar para producción
+
+Para generar la versión optimizada:
+
+```bash
+npm run build
+```
+
+Para visualizar la compilación localmente:
+
+```bash
+npm run preview
+```
+
+## 📂 Estructura del proyecto
+
+```text
+T-React/
+├── public/
+│   ├── icons.svg
+│   ├── logo.png
+│   └── recursos PWA
+├── src/
+│   ├── assets/
+│   ├── features/
+│   │   ├── auth/
+│   │   └── landing/
+│   ├── hooks/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## 🎯 Nuestra visión
+
+Convertir MOTUShonda en un espacio digital de referencia para los amantes de las Honda XR y CRF, promoviendo el conocimiento, la participación y el intercambio de experiencias dentro de la comunidad off-road.
+
+---
+
+## 📌 Estado del proyecto
+
+Proyecto en desarrollo continuo. Se trabaja en nuevas funcionalidades, mejoras de diseño y optimización de la experiencia de usuario.
+
+## 👨‍💻 Autor
+
+Desarrollado como proyecto independiente por **MOTUShonda**.
+
+---
+
+**MOTUShonda | Pasión por el off-road.** 🏁
+
+
+
+
+
+
+
+
+

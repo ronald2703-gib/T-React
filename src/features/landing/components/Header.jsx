@@ -41,7 +41,13 @@ export const Navbar = () => {
             aria-label="XR&CRF Hub, ir al inicio"
           >
             <span className="brand-badge bg-white rounded-3 d-flex align-items-center justify-content-center shadow">
-              <img src="/logo.png" alt="" width="28" height="21" decoding="async" />
+              <img
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="Logo MOTUShonda"
+              width="28"
+              height="21"
+              decoding="async"
+               />
             </span>
             <span>
               XR<span className="text-danger">&amp;</span>CRF
