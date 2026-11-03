@@ -119,7 +119,14 @@ Proyecto en desarrollo continuo. Se trabaja en nuevas funcionalidades, mejoras d
 
 ## 👨‍💻 Autor
 
-Desarrollado como proyecto independiente por **MOTUShonda**.
+Desarrollado como proyecto independiente por:
+Ronald fernando luna vidarte 
+Estudiante : SENA
+Análisis y Desarrollador de software
+Proyecto **MOTUShonda**.
+Ficha:3494620
+
+
 
 ---
 
